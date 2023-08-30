@@ -9,9 +9,9 @@ __
 Метод "вычислить периметр" (calculatePerimeter), который возвращает периметр прямоугольника (2 * (ширина + высота)). */
 package HomeWork.HW_1.Rectangle;
 
-public class Rectangle_HW_2 {
-    private Integer width = 20;
-    private Integer height = 10;
+import lesson_2.work2.Constants;
+
+public class Rectangle_HW_2 extends Constanse{
 
     public Rectangle_HW_2(Integer width, Integer height) {
         this.width = width;
@@ -37,23 +37,21 @@ public class Rectangle_HW_2 {
         this.height = height;
     }
 
-    public Integer calculateArea() {
+    /*public Integer calculateArea() {
         Integer result;
         result = width * height;
         return result;
-    }
+    }*/
 
-    public Integer calculatePerimeter() {
+    /*public Integer calculatePerimeter() {
         Integer result;
         result = 2 * (width + height);
         return result;
-    }
+    }*/
 
     public void printRectangle() {
         System.out.println(
                 "Высота прямоугольника: " + height + "\n" +
-                        "Ширина прямоугольника: " + width + "\n" +
-                        "Площадь прямоугольника: " + calculateArea() + "\n" +
-                        "Периметр прямоугольника: " + calculatePerimeter());
+                        "Ширина прямоугольника: " + width + "\n");
     }
 }

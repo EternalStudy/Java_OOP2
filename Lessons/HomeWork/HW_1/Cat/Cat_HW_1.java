@@ -13,7 +13,7 @@ __
 
 package HomeWork.HW_1.Cat;
 
-class Cat_HW1 extends Owner {
+class Cat_HW1 extends Owner implements SoundMaker {
     private String name;
     private Integer age;
 
@@ -41,5 +41,9 @@ class Cat_HW1 extends Owner {
 
     public void greet() {
         System.out.println("Мяу! Меня зовут " + name + ". Мне " + age + " года(лет). Мой владелец " + ownerName + ".");
+    }
+    @Override
+    public void makeSound() {
+        System.out.println(name + " MEEEAAAOY.");
     }
 }
