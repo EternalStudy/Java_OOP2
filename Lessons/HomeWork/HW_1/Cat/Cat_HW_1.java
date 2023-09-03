@@ -13,14 +13,16 @@ __
 
 package HomeWork.HW_1.Cat;
 
+
 class Cat_HW1 extends Owner implements SoundMaker {
     private String name;
-    private Integer age;
+    Integer age;
 
     public Cat_HW1(String name, Integer age, String ownerName) {
         super(ownerName);
         this.name = name;
         this.age = age;
+
     }
 
     public String getName() {
@@ -38,7 +40,10 @@ class Cat_HW1 extends Owner implements SoundMaker {
     public void setAge(Integer age) {
         this.age = age;
     }
-
+    public void Positive(boolean result)
+    {
+        System.out.println("Возраст кота проверен " + result);
+    }
     public void greet() {
         System.out.println("Мяу! Меня зовут " + name + ". Мне " + age + " года(лет). Мой владелец " + ownerName + ".");
     }
