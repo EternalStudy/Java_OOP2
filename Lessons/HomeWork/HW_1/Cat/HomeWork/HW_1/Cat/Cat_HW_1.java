@@ -12,43 +12,43 @@ __
 Мне <возраст> года(лет). Мой владелец - <имя владельца>.". */
 
 package HomeWork.HW_1.Cat;
+class Cat_HW1 {
+private String name;
+private Integer age;
+private String owner;
 
+public Cat_HW1(String name, Integer age, String owner) {
+    this.name = name;
+    this.age = age;
+    this.owner = owner;
+}
 
-class Cat_HW1 extends Owner implements SoundMaker {
-    private String name;
-    Integer age;
+public Integer getAge() {
+    return age;
+}
 
-    public Cat_HW1(String name, Integer age, String ownerName) {
-        super(ownerName);
-        this.name = name;
-        this.age = age;
+public void isPositive(boolean result) {
+    if (result) {
+        System.out.println("Age is positive.");
+    } else {
+        System.out.println("Age is not positive.");
+    }
+}
 
-    }
+public void greet() {
+    System.out.println("Hello, I'm " + name + "!");
+}
 
-    public String getName() {
-        return name;
-    }
+public void makeSound() {
+    System.out.println("Meow!");
+}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-    public void Positive(boolean result)
-    {
-        System.out.println("Возраст кота проверен " + result);
-    }
-    public void greet() {
-        System.out.println("Мяу! Меня зовут " + name + ". Мне " + age + " года(лет). Мой владелец " + ownerName + ".");
-    }
-    @Override
-    public void makeSound() {
-        System.out.println(name + " MEEEAAAOY.");
-    }
+@Override
+public String toString() {
+    return "Cat{" +
+            "name='" + name + '\'' +
+            ", age=" + age +
+            ", owner='" + owner + '\'' +
+            '}';
+}
 }
